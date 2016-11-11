@@ -1,0 +1,173 @@
+// STYLES
+
+@import "css/misc.sass"
+@import "css/mixins.sass"
+
+
+body
+  display: flex
+  overflow: hidden
+
+.container.active
+  +animation(lightsaber 7s infinite)
+  +animation-attr
+  transform-origin: center 70%
+
++keyframes(lightsaber)
+  0%
+    transform: rotate(0deg)
+  20%
+    transform: rotate(0deg)
+  23%
+    transform: rotate(-45deg)
+  26%
+    transform: rotate(0deg)
+  32%
+    transform: rotate(0deg)
+  35%
+    transform: rotate(60deg)
+  38%
+    transform: rotate(0deg)
+
+  100%
+    transform: rotate(0deg)
+
+.container
+  width: 100%
+  max-width: 22px
+  margin: 0 auto 120px auto
+  align-self: flex-end
+
+.light.active
+  height: 300px
+  transition: all 0.5s ease
+.light
+  height: 0px
+  margin-bottom: -10px
+  width: 100%
+  background: #B5E6AC
+  text-align: center
+  position: relative
+  border-top-left-radius: 10px
+  border-top-right-radius: 10px
+  border: 5px solid #68D557
+  border-bottom: none
+  transition: all 0.5s ease
+
+.light1
+  width: 30%
+  height: 80%
+  left: 50%
+  bottom: 0
+  transform: translateX(-50%)
+  position: absolute
+  background: #D8F0D4
+  border-top-left-radius: 10px
+  border-top-right-radius: 10px
+
+.saber
+  position: relative
+  z-index: 1
+.saber1, .saber4
+  width: 150%
+  left: 50%
+  position: relative
+  transform: translateX(-50%)
+  padding-bottom: 30%
+  background: #EAE8E0
+  border-radius: 5px
+
+.saber4
+  float: left
+  padding-bottom: 60%
+  border-top-right-radius: 0
+  border-top-left-radius: 0
+.saber2
+  box-shadow: inset 0px 10px 0px 0px rgba(0,0,0,0.3)
+.saber2, .saber3
+  width: 100%
+  padding-bottom: 80%
+  background: #45385C
+
+.saber3
+  float: left
+  width: 130%
+  left: 50%
+  position: relative
+  padding-bottom: 6px
+  transform: translateX(-50%)
+  border-radius: 5px
+  &:before
+    content: ''
+    position: absolute
+    bottom: 0
+    left: -8%
+    width: 25%
+    height: 55%
+    background: #EAE8E0
+    border-top-right-radius: 5px
+    border-top-left-radius: 5px
+    z-index: 2
+  &:after
+    content: ''
+    position: absolute
+    bottom: 0
+    right: -10%
+    width: 25%
+    height: 55%
+    background: #EAE8E0
+    border-top-right-radius: 5px
+    border-top-left-radius: 5px
+    z-index: 2
+  span
+    float: left
+    width: 110%
+    left: 50%
+    position: relative
+    transform: translateX(-50%)
+    padding-bottom: 40%
+    border-radius: 10px
+    margin-top: 6px
+    background: #3B2E52
+    &:first-child
+      margin: 0
+      width: 120%
+      padding-bottom: 20%
+
+.button
+  position: absolute
+  padding-bottom: 50%
+  width: 70%
+  background: #E25C26
+  border-radius: 10px
+  z-index: 1
+  top: 15%
+  left: 50%
+  transform: translateX(-50%)
+  border: 3px solid #EAE8E0
+  cursor: pointer
+  &:hover
+    background: #A9380B
+
+.saber5
+  float: left
+  width: 130%
+  left: 50%
+  position: relative
+  padding-bottom: 10px
+  transform: translateX(-50%)
+  padding-bottom: 60%
+  background: #4F5575
+  &:before
+    content: ''
+    position: absolute
+    width: 120%
+    transform: translateX(-50%)
+    left: 50%
+    bottom: 0
+    padding-bottom: 20%
+    background: #45385C
+    border-radius: 5px
+
+
+
